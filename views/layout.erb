@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= @title %></title>
+  </head>
+
+  <body>
+      <div id="main">
+        <div class="content">
+          <%= yield %>
+        </div>
+        
+        <div class="footer">
+          <p>-----------------------------------------</p>
+          <p>Total users: <%= @users.keys.count %></p>
+          <p>Total number of interests: <%= count_interests %></p>
+        </div>
+
+        
+      </div>
+  </body>
+</html>

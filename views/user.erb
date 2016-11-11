@@ -1,0 +1,8 @@
+<h1><%= @title %></h1>
+<h2>Email address: <%= @user[:email] %>
+<h2>Interests: <%= @user[:interests].join(', ') %></h2>
+<% @users.each do |name, info| %>
+  <% if name != @name %>
+    <p><a href="/user/<%= name %>"><%= name.capitalize %></a></p>
+  <% end %>
+<% end %>
